@@ -63,3 +63,7 @@ button {
     grid-template-columns: 1fr 1fr 2fr;
     height: 100px;
 }
+
+.equals {
+    background-color: #3378cc;
+}

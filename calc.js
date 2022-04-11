@@ -1,9 +1,20 @@
-const button = document.querySelector('button');
+const b = document.querySelectorAll('button');
+const numbers = Array.from(document.querySelector('[data-number]'));
+const operator = document.querySelector('[data-operator]');
+const allClear = document.querySelector('[data-clear]');
 
+b.forEach(b => {
+    b.addEventListener('click', userClick);
 
-const add = function(num1, num2) {
-	return num1 + num2
-};
+    function userClick(){
+        let buttonVal = this.textContent;
+        parseInt(buttonVal);
+    };
+});
+
+function add(num1, num2) {
+    return num1 + num2;
+}
 
 const subtract = function(num1, num2) {
 	return num1 - num2
