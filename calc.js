@@ -6,12 +6,17 @@ const decimal = document.querySelectorAll('[data-decimal]');
 
 // Event listeners to get value of button clicked
 
-numbers.forEach(numbers => {
+const numberClicked = numbers.forEach(numbers => {
     numbers.addEventListener('click', numberClick);
     function numberClick(){
         let numVal = this.textContent;
         const numClickInt = parseInt(numVal);
         console.log(numClickInt);
+        const display = document.querySelector('.display');
+        const h1 = document.createElement('h1');
+        h1.textContent = numClickInt
+        display.append(h1);
+
     };
 });
 
@@ -30,6 +35,7 @@ decimal.forEach(decimal => {
         console.log(decClick);
     };
 });
+
 
 // allClear.forEach(allClear =>) {
 //     allClear.addEventListener('click', clearClick);
