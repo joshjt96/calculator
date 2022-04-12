@@ -1,16 +1,42 @@
 const b = document.querySelectorAll('button');
-const numbers = Array.from(document.querySelector('[data-number]'));
-const operator = document.querySelector('[data-operator]');
+const numbers = document.querySelectorAll('[data-number]');
+const operator = document.querySelectorAll('[data-operator]');
 const allClear = document.querySelector('[data-clear]');
+const decimal = document.querySelectorAll('[data-decimal]');
 
-b.forEach(b => {
-    b.addEventListener('click', userClick);
+// Event listeners to get value of button clicked
 
-    function userClick(){
-        let buttonVal = this.textContent;
-        parseInt(buttonVal);
+numbers.forEach(numbers => {
+    numbers.addEventListener('click', numberClick);
+    function numberClick(){
+        let numVal = this.textContent;
+        const numClickInt = parseInt(numVal);
+        console.log(numClickInt);
     };
 });
+
+operator.forEach(operator => {
+    operator.addEventListener('click', operatorClick);
+    function operatorClick(){
+        let opVal = this.textContent;
+        console.log(opVal);
+    };
+});
+
+decimal.forEach(decimal => {
+    decimal.addEventListener('click', decimalClick);
+    function decimalClick(){
+        let decClick = this.textContent;
+        console.log(decClick);
+    };
+});
+
+// allClear.forEach(allClear =>) {
+//     allClear.addEventListener('click', clearClick);
+//     function clearClick(){
+//         let clearAll
+//     }
+// }
 
 function add(num1, num2) {
     return num1 + num2;
