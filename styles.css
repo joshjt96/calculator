@@ -1,70 +1,66 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    font-weight: normal;
+}
+
 body {
-    background-color: #1f1f1f;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #0f0e6b, #75361d);
 }
 
-button {
-    display: flex;
+.calculator-grid {
+    display: grid;
     justify-content: center;
-    align-items: center;
-    font-family: 'Nunito', sans-serif;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid > button {
+    cursor: pointer;
     font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
 }
 
-.border {
+.calculator-grid > button:hover {
+    background-color: rgba(255, 255, 255, .9);
+}
+
+.calculator-grid > .operator {
+    background-color: #f69906;
+}
+
+.calculator-grid > .operator:hover {
+    background-color: #f69a06c0;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
-.calculator {
-    height: 600px;
-    width: 500px;
-    background-color: #616060;
-    border-style: solid;
-    border-color: white;
-    border-radius: 5px;
-    margin-top: 100px;
+.output .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
 }
 
-.display {
-    display: grid;
-    /* grid-template-columns: 2fr 1fr; */
-    height: 100px;
-    font-family: 'Nunito', sans-serif;
-    background-color: #7e8c74;
-    text-align: left;
-}
-
-.row1 {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    height: 100px;
-}
-
-.row2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    height: 100px;
-}
-
-.row3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    height: 100px;
-}
-
-.row4 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    height: 100px;
-}
-
-.row5 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    height: 100px;
-}
-
-.equals {
-    background-color: #3378cc;
+.output .current-operand {
+    color: white;
+    font-size: 2.5rem;
 }

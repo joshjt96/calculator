@@ -11,38 +11,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="border">
-        <div class="calculator">
-            <div class="display"></div>
-            <div class="row1">
-                <button class="row1" onclick="window.location.reload();">Clear</button>
-                <button class="row1" data-operator>÷</button>
-            </div>
-                <div class="row2">
-                    <button class="row2" data-number>7</button>
-                    <button class="row2" data-number>8</button>
-                    <button class="row2" data-number>9</button>
-                    <button class="row2" data-operator>x</button>
-                </div>
-                    <div class="row3">
-                        <button class="row3" data-number>4</button>
-                        <button class="row3" data-number>5</button>
-                        <button class="row2" data-number>6</button>
-                        <button class="row3" data-operator>-</button>
-                    </div>
-                        <div class="row4">
-                            <button class="row5" data-number>1</button>
-                            <button class="row4" data-number>2</button>
-                            <button class="row4" data-number>3</button>
-                            <button class="row4" data-operator>+</button>
-                        </div>
-                            <div class="row5">
-                                <button class="row5" data-number>0</button>
-                                <button class="row5" data-decimal>.</button>
-                                <button class="row5 equals" data-operator>=</button>
-                            </div>
+    <div class="calculator-grid">
+        <div class="output">
+            <div class="previous-operand" data-previous-operand></div>
+            <div class="current-operand" data-current-operand></div>
         </div>
-    </div>  
+        <button data-all-clear class="span-two">AC</button>
+        <button data-delete>Del</button>
+        <button data-operation class="operator">÷</button>
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-operation class="operator">x</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-operation class="operator">-</button>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-operation class="operator">+</button>
+        <button data-number class="span-two">0</button>
+        <button data-number>.</button>
+        <button data-equals class="operator">=</button>
+    </div>
 </body>
-<script src="calc.js"></script>
+<script src="calc2.js"></script>
 </html>
